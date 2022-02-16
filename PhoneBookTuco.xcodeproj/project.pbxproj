@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		264EB19327BC895C001A24FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19227BC895C001A24FF /* AppDelegate.swift */; };
+		264EB19527BC895C001A24FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19427BC895C001A24FF /* SceneDelegate.swift */; };
+		264EB19727BC895C001A24FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19627BC895C001A24FF /* ViewController.swift */; };
+		264EB19A27BC895C001A24FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19827BC895C001A24FF /* Main.storyboard */; };
+		264EB19C27BC895F001A24FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19B27BC895F001A24FF /* Assets.xcassets */; };
+		264EB19F27BC895F001A24FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19D27BC895F001A24FF /* LaunchScreen.storyboard */; };
+		264EB1AA27BC8960001A24FF /* PhoneBookTucoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1A927BC8960001A24FF /* PhoneBookTucoTests.swift */; };
+		264EB1B427BC8960001A24FF /* PhoneBookTucoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1B327BC8960001A24FF /* PhoneBookTucoUITests.swift */; };
+		264EB1B627BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		264EB1A627BC8960001A24FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264EB18727BC895C001A24FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264EB18E27BC895C001A24FF;
+			remoteInfo = PhoneBookTuco;
+		};
+		264EB1B027BC8960001A24FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 264EB18727BC895C001A24FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 264EB18E27BC895C001A24FF;
+			remoteInfo = PhoneBookTuco;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		264EB18F27BC895C001A24FF /* PhoneBookTuco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookTuco.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		264EB19227BC895C001A24FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		264EB19427BC895C001A24FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		264EB19627BC895C001A24FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		264EB19927BC895C001A24FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		264EB19B27BC895F001A24FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		264EB19E27BC895F001A24FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		264EB1A027BC895F001A24FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		264EB1A527BC8960001A24FF /* PhoneBookTucoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneBookTucoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		264EB1A927BC8960001A24FF /* PhoneBookTucoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookTucoTests.swift; sourceTree = "<group>"; };
+		264EB1AF27BC8960001A24FF /* PhoneBookTucoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneBookTucoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		264EB1B327BC8960001A24FF /* PhoneBookTucoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookTucoUITests.swift; sourceTree = "<group>"; };
+		264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookTucoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		264EB18C27BC895C001A24FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264EB1A227BC8960001A24FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264EB1AC27BC8960001A24FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		264EB18627BC895C001A24FF = {
+			isa = PBXGroup;
+			children = (
+				264EB19127BC895C001A24FF /* PhoneBookTuco */,
+				264EB1A827BC8960001A24FF /* PhoneBookTucoTests */,
+				264EB1B227BC8960001A24FF /* PhoneBookTucoUITests */,
+				264EB19027BC895C001A24FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		264EB19027BC895C001A24FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				264EB18F27BC895C001A24FF /* PhoneBookTuco.app */,
+				264EB1A527BC8960001A24FF /* PhoneBookTucoTests.xctest */,
+				264EB1AF27BC8960001A24FF /* PhoneBookTucoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		264EB19127BC895C001A24FF /* PhoneBookTuco */ = {
+			isa = PBXGroup;
+			children = (
+				264EB19227BC895C001A24FF /* AppDelegate.swift */,
+				264EB19427BC895C001A24FF /* SceneDelegate.swift */,
+				264EB19627BC895C001A24FF /* ViewController.swift */,
+				264EB19827BC895C001A24FF /* Main.storyboard */,
+				264EB19B27BC895F001A24FF /* Assets.xcassets */,
+				264EB19D27BC895F001A24FF /* LaunchScreen.storyboard */,
+				264EB1A027BC895F001A24FF /* Info.plist */,
+			);
+			path = PhoneBookTuco;
+			sourceTree = "<group>";
+		};
+		264EB1A827BC8960001A24FF /* PhoneBookTucoTests */ = {
+			isa = PBXGroup;
+			children = (
+				264EB1A927BC8960001A24FF /* PhoneBookTucoTests.swift */,
+			);
+			path = PhoneBookTucoTests;
+			sourceTree = "<group>";
+		};
+		264EB1B227BC8960001A24FF /* PhoneBookTucoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				264EB1B327BC8960001A24FF /* PhoneBookTucoUITests.swift */,
+				264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */,
+			);
+			path = PhoneBookTucoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		264EB18E27BC895C001A24FF /* PhoneBookTuco */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 264EB1B927BC8960001A24FF /* Build configuration list for PBXNativeTarget "PhoneBookTuco" */;
+			buildPhases = (
+				264EB18B27BC895C001A24FF /* Sources */,
+				264EB18C27BC895C001A24FF /* Frameworks */,
+				264EB18D27BC895C001A24FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhoneBookTuco;
+			productName = PhoneBookTuco;
+			productReference = 264EB18F27BC895C001A24FF /* PhoneBookTuco.app */;
+			productType = "com.apple.product-type.application";
+		};
+		264EB1A427BC8960001A24FF /* PhoneBookTucoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 264EB1BC27BC8960001A24FF /* Build configuration list for PBXNativeTarget "PhoneBookTucoTests" */;
+			buildPhases = (
+				264EB1A127BC8960001A24FF /* Sources */,
+				264EB1A227BC8960001A24FF /* Frameworks */,
+				264EB1A327BC8960001A24FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				264EB1A727BC8960001A24FF /* PBXTargetDependency */,
+			);
+			name = PhoneBookTucoTests;
+			productName = PhoneBookTucoTests;
+			productReference = 264EB1A527BC8960001A24FF /* PhoneBookTucoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		264EB1AE27BC8960001A24FF /* PhoneBookTucoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 264EB1BF27BC8960001A24FF /* Build configuration list for PBXNativeTarget "PhoneBookTucoUITests" */;
+			buildPhases = (
+				264EB1AB27BC8960001A24FF /* Sources */,
+				264EB1AC27BC8960001A24FF /* Frameworks */,
+				264EB1AD27BC8960001A24FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				264EB1B127BC8960001A24FF /* PBXTargetDependency */,
+			);
+			name = PhoneBookTucoUITests;
+			productName = PhoneBookTucoUITests;
+			productReference = 264EB1AF27BC8960001A24FF /* PhoneBookTucoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		264EB18727BC895C001A24FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					264EB18E27BC895C001A24FF = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					264EB1A427BC8960001A24FF = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 264EB18E27BC895C001A24FF;
+					};
+					264EB1AE27BC8960001A24FF = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 264EB18E27BC895C001A24FF;
+					};
+				};
+			};
+			buildConfigurationList = 264EB18A27BC895C001A24FF /* Build configuration list for PBXProject "PhoneBookTuco" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 264EB18627BC895C001A24FF;
+			productRefGroup = 264EB19027BC895C001A24FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				264EB18E27BC895C001A24FF /* PhoneBookTuco */,
+				264EB1A427BC8960001A24FF /* PhoneBookTucoTests */,
+				264EB1AE27BC8960001A24FF /* PhoneBookTucoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		264EB18D27BC895C001A24FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264EB19F27BC895F001A24FF /* LaunchScreen.storyboard in Resources */,
+				264EB19C27BC895F001A24FF /* Assets.xcassets in Resources */,
+				264EB19A27BC895C001A24FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264EB1A327BC8960001A24FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264EB1AD27BC8960001A24FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		264EB18B27BC895C001A24FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264EB19727BC895C001A24FF /* ViewController.swift in Sources */,
+				264EB19327BC895C001A24FF /* AppDelegate.swift in Sources */,
+				264EB19527BC895C001A24FF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264EB1A127BC8960001A24FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264EB1AA27BC8960001A24FF /* PhoneBookTucoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264EB1AB27BC8960001A24FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264EB1B427BC8960001A24FF /* PhoneBookTucoUITests.swift in Sources */,
+				264EB1B627BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		264EB1A727BC8960001A24FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264EB18E27BC895C001A24FF /* PhoneBookTuco */;
+			targetProxy = 264EB1A627BC8960001A24FF /* PBXContainerItemProxy */;
+		};
+		264EB1B127BC8960001A24FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 264EB18E27BC895C001A24FF /* PhoneBookTuco */;
+			targetProxy = 264EB1B027BC8960001A24FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		264EB19827BC895C001A24FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				264EB19927BC895C001A24FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		264EB19D27BC895F001A24FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				264EB19E27BC895F001A24FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		264EB1B727BC8960001A24FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		264EB1B827BC8960001A24FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		264EB1BA27BC8960001A24FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhoneBookTuco/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leguia.PhoneBookTuco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		264EB1BB27BC8960001A24FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhoneBookTuco/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leguia.PhoneBookTuco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		264EB1BD27BC8960001A24FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leguia.PhoneBookTucoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneBookTuco.app/PhoneBookTuco";
+			};
+			name = Debug;
+		};
+		264EB1BE27BC8960001A24FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leguia.PhoneBookTucoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhoneBookTuco.app/PhoneBookTuco";
+			};
+			name = Release;
+		};
+		264EB1C027BC8960001A24FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leguia.PhoneBookTucoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhoneBookTuco;
+			};
+			name = Debug;
+		};
+		264EB1C127BC8960001A24FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leguia.PhoneBookTucoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhoneBookTuco;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		264EB18A27BC895C001A24FF /* Build configuration list for PBXProject "PhoneBookTuco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				264EB1B727BC8960001A24FF /* Debug */,
+				264EB1B827BC8960001A24FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		264EB1B927BC8960001A24FF /* Build configuration list for PBXNativeTarget "PhoneBookTuco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				264EB1BA27BC8960001A24FF /* Debug */,
+				264EB1BB27BC8960001A24FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		264EB1BC27BC8960001A24FF /* Build configuration list for PBXNativeTarget "PhoneBookTucoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				264EB1BD27BC8960001A24FF /* Debug */,
+				264EB1BE27BC8960001A24FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		264EB1BF27BC8960001A24FF /* Build configuration list for PBXNativeTarget "PhoneBookTucoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				264EB1C027BC8960001A24FF /* Debug */,
+				264EB1C127BC8960001A24FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 264EB18727BC895C001A24FF /* Project object */;
+}
