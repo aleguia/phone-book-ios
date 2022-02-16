@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		264EB19327BC895C001A24FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19227BC895C001A24FF /* AppDelegate.swift */; };
 		264EB19527BC895C001A24FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19427BC895C001A24FF /* SceneDelegate.swift */; };
-		264EB19727BC895C001A24FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19627BC895C001A24FF /* ViewController.swift */; };
 		264EB19A27BC895C001A24FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19827BC895C001A24FF /* Main.storyboard */; };
 		264EB19C27BC895F001A24FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19B27BC895F001A24FF /* Assets.xcassets */; };
 		264EB19F27BC895F001A24FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19D27BC895F001A24FF /* LaunchScreen.storyboard */; };
 		264EB1AA27BC8960001A24FF /* PhoneBookTucoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1A927BC8960001A24FF /* PhoneBookTucoTests.swift */; };
 		264EB1B427BC8960001A24FF /* PhoneBookTucoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1B327BC8960001A24FF /* PhoneBookTucoUITests.swift */; };
 		264EB1B627BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */; };
+		264EB1C327BC8E37001A24FF /* PhoneBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C227BC8E37001A24FF /* PhoneBookListViewController.swift */; };
+		264EB1C527BD51AC001A24FF /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C427BD51AC001A24FF /* AddContactViewController.swift */; };
+		264EB1C727BD53BF001A24FF /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C627BD53BF001A24FF /* Record.swift */; };
+		264EB1C927BD55C0001A24FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C827BD55C0001A24FF /* UIColor+Extension.swift */; };
+		264EB1CB27BD5694001A24FF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1CA27BD5694001A24FF /* NavigationController.swift */; };
+		264EB1CD27BD8256001A24FF /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1CC27BD8256001A24FF /* AbstractViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,6 @@
 		264EB18F27BC895C001A24FF /* PhoneBookTuco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookTuco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264EB19227BC895C001A24FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		264EB19427BC895C001A24FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		264EB19627BC895C001A24FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		264EB19927BC895C001A24FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		264EB19B27BC895F001A24FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		264EB19E27BC895F001A24FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		264EB1AF27BC8960001A24FF /* PhoneBookTucoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneBookTucoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		264EB1B327BC8960001A24FF /* PhoneBookTucoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookTucoUITests.swift; sourceTree = "<group>"; };
 		264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookTucoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		264EB1C227BC8E37001A24FF /* PhoneBookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookListViewController.swift; sourceTree = "<group>"; };
+		264EB1C427BD51AC001A24FF /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		264EB1C627BD53BF001A24FF /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		264EB1C827BD55C0001A24FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		264EB1CA27BD5694001A24FF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		264EB1CC27BD8256001A24FF /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,16 @@
 			children = (
 				264EB19227BC895C001A24FF /* AppDelegate.swift */,
 				264EB19427BC895C001A24FF /* SceneDelegate.swift */,
-				264EB19627BC895C001A24FF /* ViewController.swift */,
 				264EB19827BC895C001A24FF /* Main.storyboard */,
 				264EB19B27BC895F001A24FF /* Assets.xcassets */,
 				264EB19D27BC895F001A24FF /* LaunchScreen.storyboard */,
 				264EB1A027BC895F001A24FF /* Info.plist */,
+				264EB1C227BC8E37001A24FF /* PhoneBookListViewController.swift */,
+				264EB1C427BD51AC001A24FF /* AddContactViewController.swift */,
+				264EB1C827BD55C0001A24FF /* UIColor+Extension.swift */,
+				264EB1C627BD53BF001A24FF /* Record.swift */,
+				264EB1CA27BD5694001A24FF /* NavigationController.swift */,
+				264EB1CC27BD8256001A24FF /* AbstractViewController.swift */,
 			);
 			path = PhoneBookTuco;
 			sourceTree = "<group>";
@@ -258,8 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				264EB19727BC895C001A24FF /* ViewController.swift in Sources */,
+				264EB1C527BD51AC001A24FF /* AddContactViewController.swift in Sources */,
+				264EB1C327BC8E37001A24FF /* PhoneBookListViewController.swift in Sources */,
+				264EB1CD27BD8256001A24FF /* AbstractViewController.swift in Sources */,
+				264EB1C727BD53BF001A24FF /* Record.swift in Sources */,
+				264EB1C927BD55C0001A24FF /* UIColor+Extension.swift in Sources */,
 				264EB19327BC895C001A24FF /* AppDelegate.swift in Sources */,
+				264EB1CB27BD5694001A24FF /* NavigationController.swift in Sources */,
 				264EB19527BC895C001A24FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G74HDYDPK7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneBookTuco/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -455,7 +476,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,6 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G74HDYDPK7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneBookTuco/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -482,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
