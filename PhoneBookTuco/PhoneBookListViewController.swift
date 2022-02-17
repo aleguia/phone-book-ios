@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RecordView:UITableViewCell {
     @IBOutlet weak var firtsNameLabel: UILabel!
@@ -18,6 +19,28 @@ class PhoneBookListViewController: AbstractViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     fileprivate let cellReuseIdentifier = "RecordCell"
+    
+    //Core Data
+    private let persistentContainer = NSPersistentContainer(name: "Records")
+    
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Record> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "firstName",
+                                                         ascending: true)]
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: self.persistentContainer.viewContext,
+                                                                  sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
     
     lazy var searchButton:UIBarButtonItem = {
         let configuration = UIImage.SymbolConfiguration(pointSize: 20)
@@ -44,8 +67,48 @@ class PhoneBookListViewController: AbstractViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        subscribeToNotifications()
         configureAddButton()
         configureTitle()
+        loadPersistentStore()
+    }
+    
+    func subscribeToNotifications(){
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationDidEnterBackground(_:)),
+                                               name: UIApplication.didEnterBackgroundNotification,
+                                               object: nil)
+    }
+    
+    func loadPersistentStore(){
+        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+            if let error = error {
+                print("Unable to Load Persistent Store")
+                print("\(error), \(error.localizedDescription)")
+                
+            } else {
+                self.updateView()
+                
+                do {
+                    try self.fetchedResultsController.performFetch()
+                } catch {
+                    let fetchError = error as NSError
+                    print("Unable to Perform Fetch Request")
+                    print("\(fetchError), \(fetchError.localizedDescription)")
+                }
+                
+                self.updateView()
+            }
+        }
     }
     
     func configureAddButton(){
@@ -72,11 +135,33 @@ class PhoneBookListViewController: AbstractViewController {
         
     }
     
+    private func updateView() {
+        var hasRecords = false
+        
+        if let records = fetchedResultsController.fetchedObjects {
+            hasRecords = records.count > 0
+        }
+        
+        tableView.isHidden = !hasRecords
+        //            messageLabel.isHidden = hasQuotes
+        
+        //            activityIndicatorView.stopAnimating()
+    }
+    
     @objc func showSearchBar(_ sender: Any) {
         self.navigationItem.rightBarButtonItem = searchBar
         
         var searchItem = (self.navigationItem.rightBarButtonItem?.customView) as! UISearchBar
         searchItem.becomeFirstResponder()
+    }
+    
+    @objc func applicationDidEnterBackground(_ notification: Notification) {
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            print("Unable to Save Changes")
+            print("\(error), \(error.localizedDescription)")
+        }
     }
     
     @objc override func keyboardWillShow(notification: NSNotification) {
@@ -100,6 +185,13 @@ class PhoneBookListViewController: AbstractViewController {
         super.viewWillAppear(animated)
         self.navigationItem.rightBarButtonItem = searchButton
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAdd"{
+            var vc = segue.destination as! AddContactViewController
+            vc.managedObjectContext = persistentContainer.viewContext
+        }
+    }
 }
 
 
@@ -109,14 +201,19 @@ extension PhoneBookListViewController: UISearchBarDelegate {
         searchBar.showsCancelButton = true
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filter(with: searchText)
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //FILTER
         self.navigationItem.rightBarButtonItem = searchButton
+        //        searchBar.text = ""
         
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
-        searchBar.text = ""
+        filter(with: "")
         searchBar.resignFirstResponder()
         self.navigationItem.rightBarButtonItem = searchButton
     }
@@ -124,16 +221,73 @@ extension PhoneBookListViewController: UISearchBarDelegate {
 
 extension PhoneBookListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        guard let records = fetchedResultsController.fetchedObjects else { return 0 }
+        return records.count
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! RecordView
         
-        cell.firtsNameLabel.text = "Fernando"
-        cell.lastNameLabel.text = "Leguia"
-        cell.phoneNumberLabel.text = "999-888-7777"
+        let record = fetchedResultsController.object(at: indexPath)
+        
+        cell.firtsNameLabel.text = record.firstName
+        cell.lastNameLabel.text = record.lastName
+        cell.phoneNumberLabel.text = record.phoneNumber
         return cell
+    }
+}
+
+extension PhoneBookListViewController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break;
+            
+        case .move:
+            print("is moving")
+            break;
+            
+        default:
+            print("...")
+        }
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+        updateView()
+    }
+    
+    func filter(with searchText:String){
+        let firstNamePredicate = NSPredicate(format: "firstName CONTAINS[c] %@", searchText)
+        
+        let lastNamePredicate = NSPredicate(format: "lastName CONTAINS[c] %@", searchText)
+        
+        let phonePredicate = NSPredicate(format: "phoneNumber CONTAINS[c] %@", searchText)
+        
+        if !searchText.isEmpty {
+            fetchedResultsController.fetchRequest.predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [
+                firstNamePredicate,
+                lastNamePredicate,
+                phonePredicate
+            ])
+        } else {
+            fetchedResultsController.fetchRequest.predicate = nil
+        }
+
+        do {
+            try fetchedResultsController.performFetch()
+            tableView.reloadData()
+        } catch {
+            
+        }
     }
 }

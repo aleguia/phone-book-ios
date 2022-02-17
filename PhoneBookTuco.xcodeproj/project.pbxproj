@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2644752C27BDAB7200EF4EDB /* Records.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2644752A27BDAB7200EF4EDB /* Records.xcdatamodeld */; };
 		264EB19327BC895C001A24FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19227BC895C001A24FF /* AppDelegate.swift */; };
 		264EB19527BC895C001A24FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB19427BC895C001A24FF /* SceneDelegate.swift */; };
 		264EB19A27BC895C001A24FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264EB19827BC895C001A24FF /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		264EB1B627BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */; };
 		264EB1C327BC8E37001A24FF /* PhoneBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C227BC8E37001A24FF /* PhoneBookListViewController.swift */; };
 		264EB1C527BD51AC001A24FF /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C427BD51AC001A24FF /* AddContactViewController.swift */; };
-		264EB1C727BD53BF001A24FF /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C627BD53BF001A24FF /* Record.swift */; };
 		264EB1C927BD55C0001A24FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1C827BD55C0001A24FF /* UIColor+Extension.swift */; };
 		264EB1CB27BD5694001A24FF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1CA27BD5694001A24FF /* NavigationController.swift */; };
 		264EB1CD27BD8256001A24FF /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264EB1CC27BD8256001A24FF /* AbstractViewController.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2644752B27BDAB7200EF4EDB /* Records.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Records.xcdatamodel; sourceTree = "<group>"; };
 		264EB18F27BC895C001A24FF /* PhoneBookTuco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneBookTuco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264EB19227BC895C001A24FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		264EB19427BC895C001A24FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		264EB1B527BC8960001A24FF /* PhoneBookTucoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookTucoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		264EB1C227BC8E37001A24FF /* PhoneBookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookListViewController.swift; sourceTree = "<group>"; };
 		264EB1C427BD51AC001A24FF /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
-		264EB1C627BD53BF001A24FF /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		264EB1C827BD55C0001A24FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		264EB1CA27BD5694001A24FF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		264EB1CC27BD8256001A24FF /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 				264EB1A027BC895F001A24FF /* Info.plist */,
 				264EB1C227BC8E37001A24FF /* PhoneBookListViewController.swift */,
 				264EB1C427BD51AC001A24FF /* AddContactViewController.swift */,
+				2644752A27BDAB7200EF4EDB /* Records.xcdatamodeld */,
 				264EB1C827BD55C0001A24FF /* UIColor+Extension.swift */,
-				264EB1C627BD53BF001A24FF /* Record.swift */,
 				264EB1CA27BD5694001A24FF /* NavigationController.swift */,
 				264EB1CC27BD8256001A24FF /* AbstractViewController.swift */,
 			);
@@ -276,7 +276,7 @@
 				264EB1C527BD51AC001A24FF /* AddContactViewController.swift in Sources */,
 				264EB1C327BC8E37001A24FF /* PhoneBookListViewController.swift in Sources */,
 				264EB1CD27BD8256001A24FF /* AbstractViewController.swift in Sources */,
-				264EB1C727BD53BF001A24FF /* Record.swift in Sources */,
+				2644752C27BDAB7200EF4EDB /* Records.xcdatamodeld in Sources */,
 				264EB1C927BD55C0001A24FF /* UIColor+Extension.swift in Sources */,
 				264EB19327BC895C001A24FF /* AppDelegate.swift in Sources */,
 				264EB1CB27BD5694001A24FF /* NavigationController.swift in Sources */,
@@ -620,6 +620,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2644752A27BDAB7200EF4EDB /* Records.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2644752B27BDAB7200EF4EDB /* Records.xcdatamodel */,
+			);
+			currentVersion = 2644752B27BDAB7200EF4EDB /* Records.xcdatamodel */;
+			path = Records.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 264EB18727BC895C001A24FF /* Project object */;
 }
